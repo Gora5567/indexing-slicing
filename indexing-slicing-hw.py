@@ -1,26 +1,21 @@
-import helper
+from helper import *
 
-helper.start_task(1)
 
-print('Hello Python!'[2])
+def task1():
+    print('Hello Python!'[2])
 
-helper.end_task(1)
 
-helper.start_task(2)
+def task2():
+    print('Hello Python!'[2])
 
-print('Hello Python!'[2])
 
-helper.end_task(2)
+def task3():
+    print('Hello Python!'[0:2])
+    print('Hello Python!'[:2])
 
-helper.start_task(3)
 
-print('Hello Python!'[0:2])
-print('Hello Python!'[:2])
+def task4():
+    print('Hello Python!'[6:7] + 'at' + 'h')
 
-helper.end_task(3)
-
-helper.start_task(4)
-
-print('Hello Python!'[6:7] + 'at' + 'h')
-
-helper.end_task(4)
+for f in {task1, task2, task3, task4}:
+    run(f)
